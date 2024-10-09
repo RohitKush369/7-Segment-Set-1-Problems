@@ -1,0 +1,33 @@
+//Display possible alphabets 
+void setup() {
+  volatile char *dir;
+  dir=0x30;
+  *dir=0xFF;
+}
+void loop() {
+  volatile char *out;
+  volatile long i;
+  out=0x31;
+  *out=0x77;
+  for(i=0;i<500000;i++);
+  *out=0x7C;
+  for(i=0;i<500000;i++);
+  *out=0x39;
+  for(i=0;i<500000;i++);
+  *out=0x5E;
+  for(i=0;i<500000;i++);
+  *out=0x79;
+  for(i=0;i<500000;i++);
+  *out=0x71;
+  for(i=0;i<500000;i++);
+  *out=0x38;
+  for(i=0;i<500000;i++);
+  *out=0x63;
+  for(i=0;i<500000;i++);
+  *out=0x73;
+  for(i=0;i<500000;i++);
+  *out=0x67;
+  for(i=0;i<500000;i++);
+  *out=0x3E;
+  for(i=0;i<500000;i++);
+}
