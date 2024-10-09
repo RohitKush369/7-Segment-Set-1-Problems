@@ -1,0 +1,31 @@
+//Display 0 to 9 with decimal points
+void setup() {
+  volatile char *dirf;
+  dirf = 0x30;
+  *dirf = 0xFF;
+}
+void loop() {
+  volatile char *outf;
+  volatile long i;
+  outf = 0x31;
+  *outf = 0xBF;
+  for (i = 0; i < 500000; i++);
+  *outf = 0x86;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xDB;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xCF;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xE6;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xED;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xFD;
+  for (i = 0; i < 500000; i++);
+  *outf = 0x87;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xFF;
+  for (i = 0; i < 500000; i++);
+  *outf = 0xEF;
+  for (i = 0; i < 500000; i++);
+}
